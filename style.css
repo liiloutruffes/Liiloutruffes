@@ -40,11 +40,6 @@ a {
     text-decoration: none;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
-
 h1,
 h2,
 h3 {
@@ -70,9 +65,11 @@ p {
 
 .hero {
     min-height: 90vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     text-align: center;
 
     padding: 60px 20px;
@@ -84,7 +81,7 @@ p {
 }
 
 .hero-content {
-    max-width: 750px;
+    max-width: 800px;
 }
 
 .logo-placeholder {
@@ -112,20 +109,50 @@ p {
 }
 
 .intro {
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto 30px;
 }
 
 
-/* ================= BUTTONS ================= */
+/* ================= CONTACT TOP ================= */
 
-.main-buttons,
-.contact-buttons {
+.top-contact {
     display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
     gap: 12px;
-    justify-content: center;
-    flex-wrap: wrap;
+
+    margin: 30px auto 0;
+
+    max-width: 700px;
 }
+
+.top-contact a,
+.top-contact div {
+    width: 100%;
+
+    padding: 14px 18px;
+
+    background: var(--white);
+
+    border-radius: 15px;
+
+    box-shadow: var(--shadow);
+
+    color: var(--brown);
+
+    word-break: break-word;
+}
+
+.top-contact a:hover {
+    background: var(--cream-dark);
+}
+
+
+/* ================= BUTTONS ================= */
 
 .button {
     display: inline-block;
@@ -136,12 +163,14 @@ p {
 
     font-weight: bold;
 
-    transition: transform 0.2s ease,
-                box-shadow 0.2s ease;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .button:hover {
     transform: translateY(-2px);
+
     box-shadow: var(--shadow);
 }
 
@@ -152,6 +181,7 @@ p {
 
 .secondary {
     background: var(--white);
+
     color: var(--brown);
 
     border: 2px solid var(--brown);
@@ -170,6 +200,7 @@ p {
 
 .section-content {
     width: min(1100px, 100%);
+
     margin: auto;
 }
 
@@ -270,48 +301,105 @@ p {
 }
 
 
-/* ================= GALLERY ================= */
+/* ================= ENVIRONMENT ================= */
 
-.gallery {
+.environment {
     display: grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(220px, 1fr));
+        repeat(auto-fit, minmax(210px, 1fr));
 
-    gap: 15px;
+    gap: 18px;
+
+    margin: 35px 0;
 }
 
-.photo-placeholder {
-    min-height: 230px;
-
-    border-radius: 18px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #ead8cb,
-            #dce4d5
-        );
-
+.environment-item {
     display: flex;
 
     flex-direction: column;
 
     align-items: center;
 
-    justify-content: center;
+    text-align: center;
+
+    gap: 6px;
+
+    padding: 25px 15px;
+
+    border-radius: 18px;
+
+    background: var(--white);
+
+    box-shadow: var(--shadow);
+
+    font-size: 2.2rem;
+}
+
+.environment-item strong {
+    font-size: 1rem;
+
+    color: var(--brown);
+}
+
+.environment-item span {
+    font-size: 0.9rem;
+}
+
+.experience-text {
+    max-width: 750px;
+
+    margin: 35px auto 0;
 
     text-align: center;
 
     color: var(--brown);
 }
 
-.photo-placeholder span {
-    font-size: 4rem;
+
+/* ================= EXPERIENCE ================= */
+
+.credentials {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 20px;
 }
 
-.photo-placeholder p {
-    font-weight: bold;
+.credential {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 28px 20px;
+
+    background: var(--white);
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+
+    font-size: 2rem;
+}
+
+.credential strong {
+    margin-top: 12px;
+
+    color: var(--brown);
+
+    font-size: 1rem;
+}
+
+.credential span {
+    margin-top: 6px;
+
+    font-size: 0.9rem;
 }
 
 
@@ -321,11 +409,11 @@ p {
     display: grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(220px, 1fr));
+        repeat(auto-fit, minmax(200px, 1fr));
 
     gap: 20px;
 
-    max-width: 700px;
+    max-width: 850px;
 
     margin: auto;
 }
@@ -381,6 +469,19 @@ p {
 }
 
 
+/* ================= FACEBOOK ================= */
+
+.facebook-section {
+    text-align: center;
+}
+
+.facebook-section p {
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+}
+
+
 /* ================= ADDRESS ================= */
 
 .address {
@@ -429,8 +530,19 @@ p {
     color: #f3c8c8;
 }
 
+.contact-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
 .contact .secondary {
     background: var(--white);
+
     border-color: var(--white);
 }
 
@@ -491,25 +603,25 @@ footer p {
             18px;
     }
 
-    .button {
-        width: 100%;
-
-        max-width: 350px;
+    .top-contact a,
+    .top-contact div {
+        font-size: 0.95rem;
     }
 
-    .main-buttons,
+    .price {
+        font-size: 3rem;
+    }
+
     .contact-buttons {
         flex-direction: column;
 
         align-items: center;
     }
 
-    .card {
-        padding: 25px;
-    }
+    .contact-buttons .button {
+        width: 100%;
 
-    .price {
-        font-size: 3rem;
+        max-width: 350px;
     }
 
 }
